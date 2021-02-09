@@ -1,0 +1,43 @@
+.PS                   
+cct_init           
+scale = 2.54    
+
+
+
+d=1.5               
+
+R1: resistor(right_ d, E); llabel(,R_1,);
+dot;
+{
+    R2: resistor(up_ d, E); llabel(,R_2,);
+    C1: capacitor(right_ d); llabel(,C_1,);
+}
+ 
+R3: resistor(down_ d, E); llabel(,R_3,);
+L1: inductor(right_ d); llabel(,L_1,);
+ 
+
+#line from L1.end to R1.end
+
+#diode( down_ d/sqrt(2) right_ d/sqrt(2)  );
+#dot
+
+#resistor from Here to Here + (d,d);
+#resistor to Here + (d,d);
+
+#resistor( right_ d down_ d);  
+
+#llabel(,R3,); 
+
+#resistor(down_ d _d);
+
+#reversed(`diode', down d/sqrt(2) left d/sqrt(2) ) ; rlabel(,,D_2)
+
+
+move to -1,3
+dot
+
+move to 5,-3
+dot
+
+.PE

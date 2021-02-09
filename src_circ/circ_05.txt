@@ -1,0 +1,13 @@
+.PS                   
+cct_init           
+scale = 2.54     
+d=1.5               
+resistor(right_ d, E); llabel(,R_1,); 
+resistor(down_  d, E); llabel(,R_2,); 
+
+move to 3,-3
+dot
+
+move to -3,3
+dot
+.PE 

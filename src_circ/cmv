@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# skript pre zobrazenie circuit-makro obrazkov
+python $HOME/ownCloud/Programs/cm_viewer/view-cm.py $1
+rm *.aux
+rm *.dvi
+rm log.txt
+rm *.log
+
+
+
